@@ -1,0 +1,27 @@
+body {
+  background-color: hsl(random(360), 80%, 50%);
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  padding: 1rem;
+  margin: 2rem;
+}
+body {
+  animation: bg-color 2s ease-in-out infinite alternate;
+}
+
+@keyframes bg-color {
+  from {
+    background-color: #fa0000;
+  }
+  to {
+    background-color: #0800ff;
+  }
+}
