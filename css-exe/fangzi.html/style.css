@@ -1,0 +1,50 @@
+.house {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .roof {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 50px 50px 50px;
+    border-color: transparent transparent #ffcc33 transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .body {
+    width: 100px;
+    height: 70px;
+    background-color: #cc9966;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .door {
+    width: 30px;
+    height: 60px;
+    background-color: #663300;
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+  }
+  
+  .window {
+    width: 20px;
+    height: 20px;
+    background-color: #99ccff;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .window:first-of-type {
+    left: 10px;
+  }
+  
+  .window:last-of-type {
+    right: 10px;
+  }
