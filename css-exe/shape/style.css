@@ -1,0 +1,22 @@
+
+#vase{
+  position: absolute;
+  transform: translate(580px,180px);
+}
+#vasebottom{
+  position: absolute;
+  transform: translate(608px,380px);
+}
+#ball{ position: absolute;
+  transform: translate(580px,380px);
+  animation: colorChange2 5s linear infinite;
+}
+  
+
+  @keyframes colorChange2 {
+    0%   {background-color: red;}
+    25%  {background-color: orange;}
+    50%  {background-color: yellow;}
+    75%  {background-color: green;}
+    100% {background-color: blue;}
+  }
