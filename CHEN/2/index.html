@@ -1,59 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
- .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.box {
-  flex-basis: 25%; /* 每行六個格子，平均分配寬度 */
-  height: 100px; /* 可自訂格子的高度 */
-}
-
-.full-width {
-  flex-basis: 100%; /* 一行一個格子，撐滿整個頁面 */
-  height: 100px; /* 可自訂格子的高度 */
-}
-
-/* 每個格子的顏色，可依需求自訂 */
-.box:nth-child(2) {
-  background-color: red;
-}
-
-.box:nth-child(3) {
-  background-color: blue;
-}
-
-.box:nth-child(4) {
-  background-color: green;
-}
-
-.box:nth-child(5) {
-  background-color: yellow;
-}
-
-.box:nth-child(6) {
-  background-color: orange;
-}
-
-/* 重複上述 .box:nth-child() 29 次，總共 174 個格子 */
-
-/* 重複上述 .box:nth-child() 六次，總共六個 */
-
-  </style>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 每行显示4列，可根据需要调整 */
+            gap: 10px; /* 图片之间的间距，可根据需要调整 */
+        }
+        
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .grid-item img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
-<div class="container">
-    <!-- 這個 div 會撐滿整個頁面 -->
-    <div class="box full-width"></div>
-  
-    <!-- 以下是格子的重複部分 -->
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <!-- 重複上述六個 div.box 共 29 次，總共 174 個格子 -->
+<body>
+    <div class="grid-container">
+        <!-- 使用循环生成164个格子，并为每个格子添加唯一的图像 -->
+      
+          <div class="grid-item">
+            <img src="../../assets/渍言渍语-陈龙--12.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--13.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--14.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--15.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--16.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--17.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--18.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--19.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--20.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--21.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--22.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--23.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--24.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--25.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--26.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--27.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--28.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--29.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--30.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--31.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--32.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--33.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--34.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--35.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--36.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--37.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--38.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--39.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--40.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--41.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--42.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--43.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--44.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--45.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--46.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--47.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--48.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--49.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--50.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--51.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--52.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--53.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--54.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--55.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--56.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--57.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--58.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--59.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--60.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--61.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--62.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--63.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--64.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--65.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--66.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--67.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--68.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--69.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--70.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--71.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--72.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--73.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--74.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--75.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--76.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--77.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--78.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--79.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--80.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--81.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--82.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--83.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--84.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--85.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--86.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--87.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--88.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--89.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--90.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--91.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--92.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--93.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--94.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--95.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--96.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--97.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--98.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--99.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--100.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--101.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--102.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--103.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--104.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--105.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--106.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--107.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--108.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--109.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--110.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--111.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--112.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--113.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--114.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--115.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--116.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--117.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--118.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--119.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--120.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--121.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--122.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--123.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--124.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--125.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--126.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--127.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--128.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--129.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--130.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--131.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--132.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--133.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--134.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--135.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--136.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--137.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--138.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--139.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--140.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--141.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--142.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--143.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--144.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--145.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--146.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--147.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--148.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--149.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--150.jpg" >
+            <img src="../../assets/渍言渍语-陈龙--151.jpg" >
+<img src="../../assets/渍言渍语-陈龙--152.jpg" >
+<img src="../../assets/渍言渍语-陈龙--153.jpg" >
+<img src="../../assets/渍言渍语-陈龙--154.jpg" >
+<img src="../../assets/渍言渍语-陈龙--155.jpg" >
+<img src="../../assets/渍言渍语-陈龙--156.jpg" >
+<img src="../../assets/渍言渍语-陈龙--157.jpg" >
+<img src="../../assets/渍言渍语-陈龙--158.jpg" >
+<img src="../../assets/渍言渍语-陈龙--159.jpg" >
+<img src="../../assets/渍言渍语-陈龙--160.jpg" >
+<img src="../../assets/渍言渍语-陈龙--161.jpg" >
+<img src="../../assets/渍言渍语-陈龙--162.jpg" >
+<img src="../../assets/渍言渍语-陈龙--163.jpg" >
+<img src="../../assets/渍言渍语-陈龙--164.jpg" >
+<img src="../../assets/渍言渍语-陈龙--165.jpg" >
+<img src="../../assets/渍言渍语-陈龙--166.jpg" >
+<img src="../../assets/渍言渍语-陈龙--167.jpg" >
+<img src="../../assets/渍言渍语-陈龙--168.jpg" >
+<img src="../../assets/渍言渍语-陈龙--169.jpg" >
+<img src="../../assets/渍言渍语-陈龙--170.jpg" >
+<img src="../../assets/渍言渍语-陈龙--171.jpg" >
+<img src="../../assets/渍言渍语-陈龙--172.jpg" >
+<img src="../../assets/渍言渍语-陈龙--173.jpg" >
+<img src="../../assets/渍言渍语-陈龙--174.jpg" >
+<img src="../../assets/渍言渍语-陈龙--175.jpg" >
+<img src="../../assets/渍言渍语-陈龙--176.jpg" >
+
+
+          </div>
+    
+      </div>
   </div>
+        <!-- 添加更多图片的代码 -->
+    </div>
+</body>
+</html>
