@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+ .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex-basis: 25%; /* 每行六個格子，平均分配寬度 */
+  height: 100px; /* 可自訂格子的高度 */
+}
+
+.full-width {
+  flex-basis: 100%; /* 一行一個格子，撐滿整個頁面 */
+  height: 100px; /* 可自訂格子的高度 */
+}
+
+/* 每個格子的顏色，可依需求自訂 */
+.box:nth-child(2) {
+  background-color: red;
+}
+
+.box:nth-child(3) {
+  background-color: blue;
+}
+
+.box:nth-child(4) {
+  background-color: green;
+}
+
+.box:nth-child(5) {
+  background-color: yellow;
+}
+
+.box:nth-child(6) {
+  background-color: orange;
+}
+
+/* 重複上述 .box:nth-child() 29 次，總共 174 個格子 */
+
+/* 重複上述 .box:nth-child() 六次，總共六個 */
+
+  </style>
+</head>
+<div class="container">
+    <!-- 這個 div 會撐滿整個頁面 -->
+    <div class="box full-width"></div>
+  
+    <!-- 以下是格子的重複部分 -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <!-- 重複上述六個 div.box 共 29 次，總共 174 個格子 -->
+  </div>

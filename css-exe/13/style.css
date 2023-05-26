@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .container:hover img {
+    transform: scale(0.2);
+  }
+  
+  .container:hover .info-box {
+    transform: translateX(100%);
+  }
+  
+  .info-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: transform 0.5s ease-out;
+    overflow: auto;
+  }
+  

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chen's Academic Rubbish Bin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="../assets/garbagebin-1100l-a2.png" />
+
+    <style>
+      @font-face {
+        font-family: "dindin";
+        src: url("/Users/goodnight/Library/Fonts/DinkieBitmap-9pxDemo.ttf");
+      }
+
+      @font-face {
+        font-family: "dindin2";
+        src: url("/Users/goodnight/Library/Fonts/DinkieBitmap-9pxItalicDemo.ttf");
+      }
+
+      /* 垂直和水平居中 */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* 图片抖动 */
+      @keyframes shake {
+        0% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(-10px, 0);
+        }
+        20% {
+          transform: translate(10px, 0);
+        }
+        30% {
+          transform: translate(-10px, 0);
+        }
+        40% {
+          transform: translate(10px, 0);
+        }
+        50% {
+          transform: translate(-10px, 0);
+        }
+        60% {
+          transform: translate(10px, 0);
+        }
+        70% {
+          transform: translate(-10px, 0);
+        }
+        80% {
+          transform: translate(10px, 0);
+        }
+        90% {
+          transform: translate(-10px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      .shake {
+        animation: shake 0.02s;
+      }
+
+      /* 弹出文字样式 */
+      .popup-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .popup {
+        position: relative;
+        color: gray;
+        font-size: 20px;
+        padding: 5px;
+        transition: opacity 0.3s;
+        margin-top: 10px;
+      }
+
+      .popup.visible {
+        opacity: 1;
+      }
+
+      .popup2top {
+        position: absolute;
+        color: rgb(48, 48, 48);
+        font-size: 80px;
+        padding: 90px;
+        transition: opacity 1s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 2000px;
+        opacity: 0.8;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: marquee 8s linear infinite;
+        z-index: 999;
+      }
+
+      .popup3top {
+        position: absolute;
+        color: rgb(48, 48, 48);
+        font-size: 80px;
+        padding: 90px;
+        transition: opacity 1s;
+        top: 200px;
+        left: 0;
+        right: 0;
+        bottom: 2000px;
+        opacity: 0.8;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: marquee2 8s linear infinite;
+        z-index: 111;
+      }
+
+      .popup3top:hover {
+        color: rgb(0, 0, 0);
+        font-family: "dindin2";
+      }
+
+      .popup4top {
+        position: absolute;
+        color: rgb(48, 48, 48);
+        font-size: 80px;
+        padding: 90px;
+        transition: opacity 1s;
+        top: 400px;
+        left: 0;
+        right: 0;
+        bottom: 2000px;
+        opacity: 0.8;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: marquee 8s linear infinite;
+        z-index: 999;
+      }
+
+      @keyframes marquee2 {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      /* 旋转和呼吸动画 */
+      @keyframes rotate {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+        }
+      }
+      .myImage3-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 1%; /* 设置合适的高度 */
+  }
+
+  .myImage3-container .myImage3 {
+  width: 1%; /* 调整合适的宽度 */
+}
+      /* 图片 */
+      #myImage2 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        animation: rotate 10s infinite linear;
+        z-index: -999;
+      }
+    </style>
+
+    <script>
+      function startShaking() {
+        var image = document.getElementById("myImage");
+        var popupContainer = document.getElementById("popupContainer");
+        var popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.innerText = '我拍了拍"chen"的学术垃圾桶';
+
+        image.classList.add("shake");
+        image.style.transform = "translateY(0)"; // 向上移动图像
+        document.body.appendChild(popupContainer);
+        popupContainer.appendChild(popup);
+
+        setTimeout(function () {
+          image.classList.remove("shake");
+          image.style.transform = "translateY(0)"; // 还原图像位置
+          popup.remove();
+        }, 1000);
+
+        var myImage3Array = document.getElementsByClassName("myImage3");
+        if (myImage3Array.length < 9) {
+          var myImage3 = document.createElement("a");
+          myImage3.href = getTargetPageURL(myImage3Array.length);
+          myImage3.classList.add("myImage3");
+          myImage3.style.position = "absolute";
+          myImage3.style.bottom = "0";
+          myImage3.style.left = (myImage3Array.length * 190 + 40) + "px"; // 修改这里的距离
+          myImage3.style.transform = "translateX(-180%)";
+          myImage3.style.width = "10%";
+          myImage3.style.visibility = "visible";
+          myImage3.innerHTML = '<img src="../assets/文件夾.png" />';
+          document.getElementById("myImage3-container").appendChild(myImage3);
+
+          moveImageInParabola(myImage3, myImage3Array.length);
+
+          setTimeout(function () {
+            var numImages = myImage3Array.length;
+            var translateX = -180 + numImages * 15;
+            myImage3.style.transform = `translateX(${translateX}%)`;
+          }, 10);
+        }
+      }
+
+      function getTargetPageURL(index) {
+        var targetPages = [
+          "page1.html",
+          "page2.html",
+          "page3.html",
+          "page4.html",
+          "page5.html",
+          "page6.html",
+          "page7.html",
+          "page8.html",
+          "page9.html"
+        ];
+        return targetPages[index];
+      }
+
+      function changeText(event) {
+        var text = "";
+        var popup = event.target;
+        if (popup.classList.contains("popup2top")) {
+          text = "陈龙 Chen";
+        } else if (popup.classList.contains("popup3top")) {
+          text = "Shanghai";
+        } else if (popup.classList.contains("popup4top")) {
+          text = "2021.9-2023.5";
+        }
+        popup.innerText = text;
+        var newText = text.replace("Chen", "Chen ");
+        popup.innerText = newText;
+      }
+
+      function moveImageInParabola(image, index) {
+  var startX = 0; // 起始位置的X坐标
+  var startY = window.innerHeight - 100; // 起始位置的Y坐标
+  var endX = parseInt(image.style.left); // 结束位置的X坐标
+  var endY = parseInt(image.style.bottom); // 结束位置的Y坐标
+  var controlX = (startX + endX) / 2; // 控制点的X坐标
+  var controlY = Math.min(startY, endY) - 100; // 控制点的Y坐标
+
+  // 使用requestAnimationFrame实现平滑移动
+  var startTime = null;
+  function move(timestamp) {
+    if (!startTime) startTime = timestamp;
+    var progress = timestamp - startTime;
+
+    // 计算当前位置
+    var currentX = calculatePosition(startX, controlX, endX, progress);
+    var currentY = calculatePosition(startY, controlY, endY, progress);
+
+    // 更新图片位置
+    image.style.left = currentX + "px";
+    image.style.bottom = currentY + "px";
+
+    // 继续移动直到到达目标位置
+    if (progress < 1000) {
+      requestAnimationFrame(move);
+    }
+  }
+
+  // 计算抛物线上的点的位置
+  function calculatePosition(start, control, end, progress) {
+    var t = progress / 1000; // 进度占比
+    var u = 1 - t; // 逆进度占比
+    var tt = t * t; // 进度的平方
+    var uu = u * u; // 逆进度的平方
+    var ut2 = 2 * u * t; // 2倍的进度和逆进度的乘积
+    return uu * start + ut2 * control + tt * end;
+  }
+
+  requestAnimationFrame(move);
+}
+      function resetText(event) {
+        var text = "";
+        var popup = event.target;
+        if (popup.classList.contains("popup2top")) {
+          text = "学术垃圾桶   Academic Rubbish Bin";
+        } else if (popup.classList.contains("popup3top")) {
+          text = "学术垃圾桶   Academic Rubbish Bin";
+        } else if (popup.classList.contains("popup4top")) {
+          text = "学术垃圾桶   Academic Rubbish Bin";
+        }
+        popup.innerText = text;
+      }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        // 获取popup2top、popup3top和popup4top元素
+        var popup2top = document.querySelector(".popup2top");
+        var popup3top = document.querySelector(".popup3top");
+        var popup4top = document.querySelector(".popup4top");
+
+        // 添加鼠标悬停事件处理程序
+        popup2top.addEventListener("mouseover", changeText);
+        popup3top.addEventListener("mouseover", changeText);
+        popup4top.addEventListener("mouseover", changeText);
+
+        // 添加鼠标离开事件处理程序
+        popup2top.addEventListener("mouseout", resetText);
+        popup3top.addEventListener("mouseout", resetText);
+        popup4top.addEventListener("mouseout", resetText);
+        setTimeout(function () {
+          popup2top.style.display = "none";
+          popup3top.style.display = "none";
+          popup4top.style.display = "none";
+        }, 8000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="popup4top popup" id="popup4top" style="font-family: dindin;">
+      学术垃圾桶 Academic Rubbish Bin
+    </div>
+
+    <div class="popup2top popup" style="font-family: dindin;">
+      学术垃圾桶 Academic Rubbish Bin
+    </div>
+    <div class="popup3top popup" style="font-family: dindin;">
+      学术垃圾桶 Academic Rubbish Bin
+    </div>
+
+    <img id="myImage" src="../assets/垃圾-02.png" width="90%" onclick="startShaking()" />
+    <div id="popupContainer" class="popup-container"></div>
+    <div id="myImage3-container"></div>
+    <img id="myImage2" src="../assets/圈_画板 1.png" width="60%" />
+  </body>
+</html>

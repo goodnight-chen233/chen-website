@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .info-box img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .info-box.show {
+    transform: translate(-50%, -100%);
+  }
+  
+  .container {
+    height: 200vh; /* 设置一个足够长的高度以滚动页面 */
+  }
+  
+  
